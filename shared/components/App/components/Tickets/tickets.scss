@@ -1,0 +1,315 @@
+.tickets {
+  .header {
+    padding-left: 20px;
+  }
+
+  p.tickets-header {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .ticket {
+    background-color: #f1f9fc;
+    padding: 0 10px 0 15px;
+    margin-bottom: 13px;
+
+    p.persona {
+      text-transform: uppercase;
+    }
+
+    p.price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #66bb6a;
+    }
+
+    p.transporter {
+      font-size: 14px;
+      font-weight: 300;
+    }
+
+    &__refund-link {
+      font-size: 14px;
+      font-weight: 300;
+      cursor: pointer;
+      display: inline-block;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        background: url('/img/cancel.png') no-repeat center center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.action-btns {
+  > div {
+    display: inline;
+    padding-right: 15px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      margin-right: 5px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__email {
+    span {
+      color: #c1c1c1;
+      cursor: not-allowed;
+
+      &:before {
+        background: url('/img/save-email.png') no-repeat center center;
+        width: 27px;
+        height: 20px;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &__local {
+    span {
+      cursor: pointer;
+
+      &:before {
+        background: url('/img/save-local.png') no-repeat center center;
+        width: 23px;
+        height: 23px;
+      }
+    }
+  }
+
+  &__print {
+    span {
+      cursor: pointer;
+
+      &:before {
+        width: 27px;
+        height: 23px;
+        cursor: pointer;
+        background: url('/img/save-print.png') no-repeat center center;
+      }
+    }
+  }
+
+  &__status {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .tickets {
+    .refund-inprogress {
+      margin-top: 35px;
+    }
+  }
+  .showmobileb {
+    display: block;
+  }
+  .showmobileib {
+    display: inline-block;
+  }
+  .showdesktopb,
+  .showdesktopib {
+    display: none;
+  }
+
+  .tickets ticket {
+    padding: 0 5px 0 5px;
+  }
+
+  .tickets .header {
+    display: none;
+  }
+
+  .ticket .col-xs-4 {
+    padding: 0;
+  }
+
+  .ticket .col-xs-8 {
+    padding: 0 0 0 17px;
+  }
+
+  p.place-departure,
+  p.place-arrived {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 17px;
+  }
+
+  p.place-departure {
+    font-size: 16px;
+    margin: 6px 0 5px 0;
+  }
+  p.place-arrived {
+    margin: 4px 0 5px 0;
+  }
+
+  .time-departure {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 17px;
+    margin: 5px 0 5px 0;
+  }
+  p.time-arrived {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 17px;
+    margin: 3px 0 5px 0;
+  }
+
+  .duration {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 6px 0 5px 0;
+  }
+
+  .sits {
+    margin: 5px 0 5px 0;
+  }
+
+  .price {
+    margin: 5px 0 5px 0;
+  }
+
+  .trip__arrow-one {
+    margin: -1px 0 0 0;
+    width: 42px;
+    height: 35px;
+    background: url('/img/arrow_one_route_mobile.png') no-repeat center center;
+  }
+
+  .ticket-departure-date,
+  .ticket-arrived-date {
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .transporter {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .action-btns {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+
+    > div {
+      padding: 0 0 0 15px;
+    }
+
+    &__local {
+      min-width: calc(33.33333333% + 6px);
+    }
+  }
+
+  .ticket__refund-link {
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tickets {
+    .showdesktopb {
+      display: block;
+    }
+    .showdesktopib {
+      display: inline-block;
+    }
+    .showmobileb,
+    .showmobileib {
+      display: none;
+    }
+  }
+
+  .account__tickets {
+    .ticket {
+      .persona,
+      .price,
+      .time-departure,
+      .duration,
+      .time-arrived {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .tickets {
+    margin-top: 45px;
+    margin-bottom: 75px;
+
+    .ticket__refund-link {
+      margin-top: 55px;
+    }
+
+    .ticket__content {
+      padding-left: 0;
+    }
+
+    .refund-inprogress {
+      margin-top: 35px;
+    }
+  }
+
+  .tickets {
+    p.place-departure,
+    p.place-arrived {
+      font-size: 18px;
+      font-weight: 300;
+    }
+    p.persona,
+    .time-departure,
+    p.duration,
+    p.time-arrived,
+    p.sits {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .trip__arrow-one {
+      margin-bottom: 0;
+    }
+
+    .time-departure {
+      text-align: left;
+      font-size: 18px;
+      line-height: 17px;
+      margin: 18px 0;
+    }
+
+    .trip__arrow-one:before {
+      content: '';
+      width: 106px;
+      height: 10px;
+      display: inline-block;
+    }
+
+    .trip__arrow-one:before {
+      background: url('/img/arrow_one_route.png') no-repeat center center;
+    }
+
+    .action-btns {
+      margin: 16px 0;
+    }
+  }
+}

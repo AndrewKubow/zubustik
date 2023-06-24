@@ -1,0 +1,67 @@
+.wrapper-time-filter {
+  position: fixed;
+  background-color: rgba(191, 191, 191, 0.8);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.time-filter {
+  position: absolute;
+  top: 50px;
+  width: 210px;
+  z-index: 1000;
+  padding-left: 35px;
+  padding-right: 42px;
+  padding-bottom: 30px;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(251, 251, 251);
+  box-sizing: border-box;
+  font-family: 'PF DinDisplay Pro';
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  border-radius: 2px;
+
+  .rc-slider-track {
+    background-color: #a5d6a7;
+  }
+
+  .rc-slider-handle {
+    border-color: #a5d6a7;
+
+    &:hover,
+    &:active {
+      border-color: #81c784;
+    }
+  }
+
+  .time-filter__time {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  .time-filter__close {
+    font-size: 22px;
+    color: #66bb6a;
+    position: absolute;
+    right: 10px;
+    top: -3px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .range-wrapper {
+    position: relative;
+  }
+
+  .range-cancel {
+    position: absolute;
+    top: -12px;
+    right: -34px;
+    color: #f84444;
+    cursor: pointer;
+    padding: 10px 5px;
+  }
+}

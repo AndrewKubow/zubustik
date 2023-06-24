@@ -1,0 +1,163 @@
+@keyframes arrowmoveback {
+  0% {
+    right: 5px;
+  }
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: 5px;
+  }
+}
+
+.schedule__city {
+  // margin-bottom: 45px;
+
+  .loading {
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 30vh;
+    margin-bottom: 32vh;
+  }
+
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #4c4c4c;
+
+    .city-selected {
+      color: #66bb6a;
+    }
+  }
+
+  span.city-selected {
+    color: #66bb6a;
+  }
+
+  li.city-list {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  div.city-adress {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px;
+    cursor: pointer;
+
+    &:after {
+      margin-left: 10px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      height: 1px;
+      width: 0%;
+      background-color: #66bb6a;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  div.map {
+    margin-top: 20px;
+  }
+
+  div.schedule__city__routehead {
+    margin-top: 50px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding-left: 20px;
+    }
+
+    p.routehead__sort {
+      cursor: pointer;
+    }
+  }
+
+  div.schedule__city__route {
+    p {
+      padding-left: 20px;
+      font-size: 18px;
+    }
+
+    p.route__price {
+      font-weight: bold;
+      color: #66bb6a;
+    }
+
+    p.route__regular {
+      font-weight: 500;
+    }
+
+    p.route__time {
+      font-weight: 500;
+    }
+
+    p.route__point {
+      font-weight: 300;
+    }
+
+    span.fromName {
+      font-weight: 300;
+    }
+
+    span.toName {
+      font-weight: 500;
+    }
+  }
+
+  .arrow-down:after,
+  .arrow-up:after {
+    content: '';
+    width: 8px;
+    height: 5px;
+    display: inline-block;
+    background: url('/img/arrow.png') no-repeat;
+    position: relative;
+    left: 5px;
+    bottom: 3px;
+  }
+
+  .arrow-up:after {
+    transform: scale(1, -1);
+  }
+
+  .backToSchedule {
+    color: #66bb69;
+    padding: 20px;
+    text-decoration: none;
+
+    &:hover .schedule__arrow-left {
+      animation: arrowmoveback 1s infinite;
+    }
+
+    .schedule__arrow-left {
+      position: relative;
+      right: 5px;
+    }
+
+    span {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 500;
+      padding-left: 5px;
+    }
+  }
+
+  .currency {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,13 @@
+.aditional-info {
+  .aditional-info__datepicker {
+    padding-top: 23px;
+  }
+
+  .aditional-info__sex,
+  .aditional-info__num-doc,
+  .aditional-info__datepicker,
+  .aditional-info__citizenship,
+  .aditional-info__doctype {
+    text-transform: uppercase;
+  }
+}

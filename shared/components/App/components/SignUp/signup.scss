@@ -1,0 +1,79 @@
+.signup-form {
+  &__callback {
+    p {
+      font-weight: 300;
+    }
+
+    .social {
+      margin-top: 30px;
+    }
+  }
+
+  &__oferta {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .phone {
+    position: relative;
+  }
+  .phone input[type='tel'] {
+    padding-left: 11px;
+  }
+  .plus {
+    color: #ffffff;
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+  }
+  input::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  input:-moz-placeholder {
+    color: #ffffff;
+  }
+  input::-moz-placeholder {
+    color: #ffffff;
+  }
+  input:-ms-input-placeholder {
+    color: #ffffff;
+  }
+}
+
+.oferatbtn {
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  .signup-form {
+    max-width: 600px;
+    padding-top: 55px;
+
+    &__oferta {
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+  }
+
+  div.signup_btn {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .signup-form {
+    padding: 30px 0 0 0;
+
+    // &__oferta {
+    //   padding-right: 155px;
+    // }
+
+    &__messengers {
+      margin-top: 18px;
+    }
+  }
+
+  div.signup_btn {
+    margin-top: 25px;
+  }
+}

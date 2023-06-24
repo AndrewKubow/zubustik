@@ -1,0 +1,491 @@
+.salepage {
+  margin-bottom: 45px;
+
+  .sale__trip {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .btn-loadmore {
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px !important;
+  }
+
+  .sale__ticket {
+
+    i {
+      font-size: 21px;
+      color: #66bb6a;
+
+      &.tiket__warning {
+        color: #f84444;
+      }
+    }
+  }
+
+  .no-ticket {
+    color: #f84444;
+  }
+
+  .hr {
+    border-bottom: 1px dashed #ccc;
+  }
+
+  .only-auth-user {
+    color: #797979;
+  }
+
+  .city-block {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .sale__discount {
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 13px;
+    background-color: #f84444 !important;
+    color: #fff !important;
+  }
+
+  .sale__direction {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 0px;
+
+    .price__first,
+    .price__second,
+    .price__currency {
+      color: #66bb6a;
+    }
+
+    .price__currency {
+      font-size: 20px;
+      margin-left: 5px;
+    }
+
+    .price__second {
+      font-size: 22px;
+    }
+  }
+
+  .sale__text {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .sale__owner {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .discounts__filter {
+    margin-bottom: 15px;
+  }
+
+  .discounts__filter-mobile {
+    z-index: 8;
+  }
+
+  .discount__country {
+    color: #cecece;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 5px;
+  }
+
+  .discount__progress {
+    text-align: center;
+    margin: 152px;
+  }
+
+  div.results__tripshead {
+    margin-top: 50px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .arrow-down:after,
+  .arrow-up:after {
+    content: '';
+    width: 8px;
+    height: 5px;
+    display: inline-block;
+    background: url('/img/arrow.png') no-repeat;
+    position: relative;
+    left: 5px;
+    bottom: 3px;
+  }
+
+  .arrow-up:after {
+    transform: scale(1, -1);
+  }
+
+  .return {
+    margin: 20px;
+    border: 1px dashed;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .station:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #66bb6a;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: text-bottom;
+  }
+
+  .station {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .station__name {
+    border-left: 1px solid #d7d7d7;
+    padding-bottom: 13px;
+    margin-left: 7px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    padding-left: 35px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .station__name.last {
+    border: none;
+  }
+
+  .label,
+  .station__change__label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .label {
+    margin-top: 5px;
+  }
+
+  .station__change {
+    p {
+      font-size: 18px;
+      font-weight: 300;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    p.station__change__time {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    p.station__change__name {
+      margin-top: 0;
+    }
+  }
+
+  .station__change__label {
+    margin-top: 12px;
+  }
+
+  p.race-name {
+    margin: 0;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  p.trip__notfound {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 100;
+    margin-top: 102px;
+  }
+
+  p.trip__nextday {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .trip__arrow-one,
+  .trip__arrow-multi {
+    margin-bottom: 0;
+  }
+
+  p.trip__change {
+    margin-top: 0;
+  }
+
+  hr {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .trip__progress {
+    text-align: center;
+    margin: 50px;
+  }
+
+  .fa-filter {
+    font-size: 13px;
+    position: relative;
+    left: 4px;
+    top: -2px;
+    color: #808080;
+  }
+
+  .my-filter-on {
+    color: #f84444;
+  }
+
+  .trip__discount {
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 13px;
+    margin-top: 16px;
+    background-color: #f84444 !important;
+    color: #fff !important;
+  }
+
+  .details__buy {
+    padding-bottom: 25px;
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      color: #66bb6a;
+    }
+
+    .buy-button {
+      margin-top: 10px;
+    }
+  }
+
+  .saledatepiker {
+    color: #000000;
+
+    input {
+      margin-left: 35px;
+    }
+
+    &:before {
+      content: '';
+      width: 24px;
+      height: 27px;
+      background: url('/img/datepiker.svg') no-repeat center center;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      bottom: 13px;
+    }
+  }
+
+  div.discount__routehead {
+    margin-top: 20px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .salepage {
+    &__filter {
+      margin-bottom: 20px;
+    }
+
+    .snackbar > div {
+      height: auto !important;
+      line-height: normal !important;
+    }
+
+    .saledatepiker input {
+      margin-left: 30px;
+      font-size: 14px !important;
+    }
+
+    .sale__discount {
+      height: 40px;
+      width: 40px;
+      font-size: 14px;
+      text-align: center;
+      padding-top: 10px;
+      background-color: #f84444 !important;
+      color: #fff !important;
+    }
+
+    .sale__price {
+      margin-top: 15px;
+
+      .sale__direction {
+        text-align: right;
+      }
+    }
+
+    .sale__direction {
+      font-size: 24px;
+      margin-top: 5px;
+
+      .price__second,
+      .price__currency {
+        font-size: 15px;
+      }
+    }
+
+    .sale__can {
+      margin: 0;
+      text-align: left;
+
+      .lessday {
+        margin-right: 15px;
+      }
+
+      span {
+        color: #f84444;
+        font-weight: 400;
+        float: right;
+      }
+    }
+
+    .btn {
+      padding: 8px 12px 8px;
+    }
+
+    .sale__dep {
+      margin-bottom: 0;
+
+      span {
+        font-weight: 400;
+      }
+    }
+
+    .sale__ticket {
+      margin-top: 10px;
+      float: right;
+
+      i {
+        font-size: 23px;
+        color: #66bb6a;
+      }
+
+      span {
+        margin-left: 5px;
+        vertical-align: 2px;
+      }
+    }
+
+    .only-mobile {
+      display: block !important;
+    }
+
+    .only-desktop {
+      display: none;
+    }
+  }
+
+  .discount__routehead {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .salepage {
+    margin: 0 auto;
+
+    &__filter {
+      padding: 20px;
+    }
+
+    .salesubmit {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .btn--green {
+      padding: 7px 22px 7px;
+    }
+
+    .trip__progress {
+      margin: 152px;
+    }
+
+    .only-mobile {
+      display: none !important;
+    }
+
+    .only-desktop {
+      display: block;
+    }
+
+    .sale__direction {
+
+      &.city {
+        display: inline-block;
+      }
+
+      .arrow {
+        display: inline-block;
+        margin-right: 5px;
+        margin-left: 5px;
+      }
+    }
+
+    .sale__ticket {
+
+      i {
+        vertical-align: text-top;
+      }
+
+      span {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .station__change:before {
+    content: '';
+    vertical-align: bottom;
+    width: 80px;
+    height: 30px;
+    background: url('/img/change_bus.png') no-repeat center center;
+    float: left;
+    position: relative;
+    left: -30px;
+    top: 7px;
+  }
+}

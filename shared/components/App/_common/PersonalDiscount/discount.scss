@@ -1,0 +1,26 @@
+.personal-discount {
+  padding-left: 20px;
+  margin-top: 45px;
+  margin-bottom: 75px;
+
+  p.discaunt-total {
+    font-size: 18px;
+    font-weight: 500;
+
+    span {
+      font-size: 24px;
+      font-weight: 500;
+      color: #66bb6a;      
+    }
+  }
+
+  p.condition {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p.text {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}

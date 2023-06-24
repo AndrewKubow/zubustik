@@ -1,0 +1,17 @@
+.search-module {
+  .search__label-datepicker {
+    color: #000000;
+
+    &:before {
+      content: '';
+      width: 24px;
+      height: 27px;
+      background: url('/img/datepiker.svg') no-repeat center center;
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 9px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+  }
+}

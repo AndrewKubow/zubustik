@@ -1,0 +1,157 @@
+.checkout__trip {
+  .trip__details__down:after,
+  .trip__details__up:after {
+    content: '';
+    width: 10px;
+    height: 6px;
+    display: inline-block;
+    background: url('/img/arrow_details.png') no-repeat;
+    margin-left: 3px;
+    vertical-align: middle;
+  }
+
+  .trip__city-direction {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .trip__details__down,
+  .trip__details__up {
+    cursor: pointer;
+  }
+
+  .trip__details__up:after {
+    transform: scale(1, -1);
+  }
+
+  background-color: #f7f7f7;
+
+  .currency {
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+  }
+
+  .trip__race-name {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .trip__time,
+  .trip__duration,
+  .trip__places {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .trip__owner {
+    font-weight: 300;
+    font-size: 14px;
+  }
+
+  .trip__details {
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .trip__full-price {
+    font-weight: 300;
+
+    span {
+      color: #66bb6a;
+      font-weight: 500;
+    }
+  }
+
+  .trip__price,
+  .trip__old,
+  .trip__price-lonely {
+    font-weight: 500;
+    font-size: 18px;
+
+    .price {
+      margin-right: 5px;
+    }
+  }
+
+  .trip__price,
+  .trip__price-lonely {
+    color: #66bb6a;
+  }
+
+  .trip__price {
+    margin-top: 0;
+  }
+
+  .trip__old-price {
+    color: #000000;
+    text-decoration: line-through;
+    margin-bottom: 0;
+  }
+
+  &.second-row {
+    padding-bottom: 15px;
+  }
+
+  .trip__places__low {
+    color: #f84444;
+  }
+
+  .discount-name {
+    color: #f84444;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .trip__details__down,
+  .trip__details__up {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .checkout__trip {
+    padding: 0;
+    margin: 0 -10px;
+  }
+
+  .trip__city {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkout__trip {
+    padding: 15px;
+    margin-bottom: 20px;
+
+    .trip__city-direction {
+      padding: 0 15px;
+    }
+
+    .trip__race-name {
+      padding: 0 15px;
+    }
+
+    .trip__owner {
+      padding: 0 15px;
+    }
+
+    .trip__duration.showdesktopb {
+      margin-top: 0px;
+    }
+
+    .trip__arrow-one {
+      margin-bottom: 0;
+      width: 106px;
+      height: 10px;
+      background: url('/img/arrow_one_route.png') no-repeat center center;
+    }
+  }
+}

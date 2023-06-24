@@ -1,0 +1,407 @@
+.segment {
+  margin-bottom: 45px;
+
+  .segment__details {
+    background-color: #f7f7f7;
+    padding: 23px;
+    margin-top: 50px;
+  }
+
+  .loading {
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 30vh;
+    margin-bottom: 32vh;
+  }
+
+  div.results__tripshead {
+    margin-top: 50px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  div.results__trip {
+    p {
+      font-size: 18px;
+    }
+
+    .trip__time,
+    .trip__duration,
+    .trip__places {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .trip__station {
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    .trip__owner {
+      font-weight: 300;
+      font-size: 14px;
+    }
+
+    .trip__details {
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .trip__full-price {
+      font-weight: 300;
+
+      span {
+        color: #66bb6a;
+        font-weight: 500;
+      }
+    }
+
+    .trip__price,
+    .trip__old,
+    .trip__price-lonely {
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .trip__price,
+    .trip__price-lonely {
+      color: #66bb6a;
+    }
+
+    .trip__price {
+      margin-top: 0;
+    }
+
+    .trip__old-price {
+      color: #000000;
+      text-decoration: line-through;
+      margin-bottom: 0;
+    }
+
+    &.second-row {
+      padding-bottom: 15px;
+    }
+  }
+
+  .arrow-down:after,
+  .arrow-up:after {
+    content: '';
+    width: 8px;
+    height: 5px;
+    display: inline-block;
+    background: url('/img/arrow.png') no-repeat;
+    position: relative;
+    left: 5px;
+    bottom: 3px;
+  }
+
+  .arrow-up:after {
+    transform: scale(1, -1);
+  }
+
+  .trip__details__down:after,
+  .trip__details__up:after {
+    content: '';
+    width: 10px;
+    height: 6px;
+    display: inline-block;
+    background: url('/img/arrow_details.png') no-repeat;
+    margin-left: 3px;
+    vertical-align: middle;
+  }
+
+  .trip__details__down,
+  .trip__details__up {
+    cursor: pointer;
+  }
+
+  .trip__details__up:after {
+    transform: scale(1, -1);
+  }
+
+  .trip__places__low {
+    color: #f84444;
+  }
+
+  div.details {
+    .details__bus,
+    .details__bag,
+    .details__comfort,
+    .details__discount,
+    .details__map {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .content {
+      font-weight: 300;
+      padding-left: 37px;
+      margin-top: 0;
+    }
+
+    .details__bus:before,
+    .details__bag:before,
+    .details__comfort:before,
+    .details__discount:before,
+    .details__map:before {
+      content: '';
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: bottom;
+    }
+
+    .details__bus:before {
+      width: 30px;
+      height: 30px;
+      background: url('/img/bus.png') no-repeat center center;
+    }
+
+    .details__bag:before {
+      width: 30px;
+      height: 25px;
+      background: url('/img/bag.png') no-repeat center center;
+    }
+
+    .details__comfort:before {
+      width: 30px;
+      height: 30px;
+      background: url('/img/comfort.png') no-repeat center center;
+    }
+
+    .details__discount:before {
+      width: 33px;
+      height: 24px;
+      background: url('/img/discount.png') no-repeat center center;
+    }
+
+    .details__map:before {
+      width: 32px;
+      height: 32px;
+      background: url('/img/return_money.png') no-repeat center center;
+    }
+  }
+
+  .return {
+    margin: 20px;
+    border: 1px dashed;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .details__buy {
+    padding-bottom: 25px;
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      color: #66bb6a;
+    }
+
+    .buy-button {
+      margin-top: 10px;
+    }
+  }
+
+  .station:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #66bb6a;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: text-bottom;
+  }
+
+  .station {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .station__name {
+    border-left: 1px solid #d7d7d7;
+    padding-bottom: 13px;
+    margin-left: 7px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    padding-left: 35px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .station__name.last {
+    border: none;
+  }
+
+  .label,
+  .station__change__label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .label {
+    margin-top: 5px;
+  }
+
+  .station__change {
+    p {
+      font-size: 18px;
+      font-weight: 300;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    &:before {
+      content: '';
+      vertical-align: bottom;
+      width: 80px;
+      height: 30px;
+      background: url('/img/change_bus.png') no-repeat center center;
+      float: left;
+      position: relative;
+      left: -30px;
+      top: 7px;
+    }
+
+    p.station__change__time {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    p.station__change__name {
+      margin-top: 0;
+    }
+  }
+
+  .station__change__label {
+    margin-top: 12px;
+  }
+
+  p.race-name {
+    margin: 0;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  p.trip__notfound {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 100;
+    margin-top: 102px;
+  }
+
+  p.trip__nextday {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .trip__arrow-one,
+  .trip__arrow-multi {
+    margin-bottom: 0;
+  }
+
+  .trip__arrow-one:before,
+  .trip__arrow-multi:before {
+    content: '';
+    width: 106px;
+    height: 10px;
+    display: inline-block;
+  }
+
+  .trip__arrow-one:before {
+    background: url('/img/arrow_one_route.png') no-repeat center center;
+  }
+
+  .trip__arrow-multi:before {
+    background: url('/img/arrow_multi_route.png') no-repeat center center;
+  }
+
+  p.trip__change {
+    margin-top: 0;
+  }
+
+  hr {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .segment__progress {
+    text-align: center;
+    margin: 152px;
+  }
+
+  .fa-filter {
+    font-size: 13px;
+    position: relative;
+    left: 4px;
+    top: -2px;
+    color: #808080;
+  }
+
+  .my-filter-on {
+    color: #f84444;
+  }
+
+  .trip__discount {
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 13px;
+    margin-top: 3px;
+    background-color: #f84444 !important;
+    color: #fff !important;
+  }
+
+  .price-bestoffers,
+  .race-name-header {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .min-price,
+  .min-price__currency {
+    color: #66bb6a;
+  }
+
+  .min-price__currency {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .segment {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}

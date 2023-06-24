@@ -1,0 +1,31 @@
+.results {
+  h1 {
+    text-align: center;
+    color: #4c4c4c;
+
+    font-weight: 300;
+
+    span {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+  .results h1 {
+    font-size: 24px;
+    padding: 5px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .results {
+    min-height: 52vh;
+
+    h1 {
+      font-size: 43px;
+      padding: 20px 0;
+    }
+  }
+}

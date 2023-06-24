@@ -1,0 +1,12 @@
+@media screen and (min-width: 1px) and (max-width: 991px) {
+  .seo-text {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .seo-text {
+    margin: 0 auto 95px auto;
+    display: block;
+  }
+}

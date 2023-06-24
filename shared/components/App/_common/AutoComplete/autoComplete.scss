@@ -1,0 +1,38 @@
+.search__label {
+  color: #000000;
+  z-index: 9999;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: 'PF DinDisplay Pro';
+
+  &:before {
+    z-index: 9999;
+    content: '';
+    width: 23px;
+    height: 27px;
+    background: url('/img/location.png') no-repeat center center;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 9px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+}
+
+.search-module {
+  .search__label-datepicker {
+    color: #000000;
+
+    &:before {
+      content: '';
+      width: 23px;
+      height: 27px;
+      background: url('/img/datepiker.svg') no-repeat center center;
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 9px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+  }
+}

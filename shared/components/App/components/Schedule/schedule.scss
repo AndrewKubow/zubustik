@@ -1,0 +1,75 @@
+.schedule__list {
+  min-height: 581px;
+  padding-bottom: 176px;
+
+  h3 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #4c4c4c;
+  }
+
+  .schedule__country > div {
+    width: 100% !important;
+  }
+
+  .schedule__autocompete {
+    margin-top: 8px;
+  }
+
+  .schedule__cities {
+    margin-top: 50px;
+    margin-bottom: 65px;
+  }
+
+  .schedule__city {
+    display: inline-block;
+    position: relative;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      height: 1px;
+      width: 0%;
+      background-color: #66bb6a;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  .loading {
+    font-size: 40px;
+    font-weight: 100;
+    margin-top: 30vh;
+    margin-bottom: 32vh;
+  }
+
+  .schedule__city-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .clearfix {
+    clear: both;
+  }
+
+  .schedule__city-lonely {
+    padding-left: 40px;
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .schedule__route {
+    margin: 0 auto;
+  }
+}

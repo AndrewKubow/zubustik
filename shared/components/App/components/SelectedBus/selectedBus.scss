@@ -1,0 +1,48 @@
+.selected-bus {
+  margin-top: 60px;
+
+  div.selected-bus__row {
+    padding-left: 25px;
+  }
+
+  div.selected-bus__title p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .selected-bus__from p,
+  .selected-bus__to p,
+  .selected-bus__date p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .selected-bus__from p:before,
+  .selected-bus__to p:before {
+    content: '';
+    width: 23px;
+    height: 27px;
+    background: url('/img/location.png') no-repeat center center;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 9px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .selected-bus__date p:before {
+    content: '';
+    width: 23px;
+    height: 27px;
+    background: url('/img/datepiker.svg') no-repeat center center;
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 9px;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+
+  .selected-bus__clear p {
+    cursor: pointer;
+  }
+}

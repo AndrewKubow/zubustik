@@ -1,0 +1,113 @@
+$currency: #66bb6a;
+$price: #66bb6a;
+$text-size: 20px;
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+
+  .popular {
+
+  }
+  .bus-segment__about {
+
+    display: none;
+  }
+
+  .popular h2 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #4c4c4c;
+  }
+
+  .popular h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #4c4c4c;
+  }
+
+  .popular__item span {
+
+    font-size: 14px;
+  }
+
+  .popular__item .item__name {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 24px;
+    margin-left: 5px;
+  }
+  .item__price-label {
+    color: $price;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .item__price {
+    color: $price;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 5px;
+  }
+
+  .item__currency {
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    color: $currency;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .popular {
+    margin-bottom: 65px;
+
+    .popular__item {
+      cursor: pointer;
+      background-color: #ffffff;
+      transition: background-color 0.5s;
+      padding-top: 15px;
+      padding-bottom: 5px;
+
+      &:hover {
+        background-color: #f8f8f8;
+      }
+
+      .item__name {
+        font-size: $text-size;
+        font-weight: 300;
+      }
+
+      .item__price-label {
+        color: $price;
+        font-size: $text-size;
+        font-weight: 300;
+      }
+
+      .item__price {
+        color: $price;
+        font-size: $text-size;
+        font-weight: bold;
+        margin: 0 5px;
+      }
+
+      .item__currency {
+        font-weight: 400;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 17px;
+        color: $currency;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 43px;
+    font-weight: 300;
+    text-align: center;
+    color: #4c4c4c;
+  }
+
+}

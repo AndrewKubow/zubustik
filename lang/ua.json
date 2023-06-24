@@ -1,0 +1,12 @@
+{
+  "locale": "ua",
+  "formats": {},
+  "messages": {
+    "siteTitle": "Головна",
+    "hello": "Добрий день!",
+    "count": "Counts",
+    "switchLanguage": "Switch Language"
+  },
+  "ua": "УКР",
+  "ru": "РУС"
+}

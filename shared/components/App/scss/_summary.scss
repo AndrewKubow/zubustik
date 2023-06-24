@@ -1,0 +1,54 @@
+.summary {
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  padding: 18px 0;
+
+  &__submit {
+
+  }
+
+  &__book {
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-left: 20px;
+  }
+
+  .currency {
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 5px;
+  }
+
+  @media screen and (max-width: 991px) {
+    margin: 0 -10px;
+
+    &__col {
+      text-align: center;
+    }
+
+    &__submit {
+      margin: 13px 0;
+    }
+
+    &__book {
+      text-decoration: underline;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    &__col {
+      text-align: right;
+    }
+
+    &__submit {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}

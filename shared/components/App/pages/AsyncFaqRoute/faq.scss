@@ -1,0 +1,114 @@
+.faq-page {
+  margin-top: 35px;
+  margin-bottom: 100px;
+
+  .textpage-title {
+    font-size: 42px;
+    font-weight: 500;
+    color: #4c4c4c;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      height: 5px;
+      width: 100%;
+      background-color: #66bb6a;
+    }
+  }
+
+  .textpage-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .textpage-focus {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__infoblock {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .collapse-title {
+    border-bottom: 1px solid #66bb6a;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+
+    span.active {
+      color: #66bb6a;
+    }
+
+    span {
+      &:hover {
+        color: #66bb6a;
+      }
+    }
+  }
+
+  &__address {
+    border: 1px dashed #66bb6a;
+    padding: 15px;
+
+    .phone-label {
+      padding-left: 5px;
+    }
+  }
+
+  .faq-page__header,
+  .faq-page__footer,
+  .faq-page__center {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .faq-page__header {
+    padding-top: 16px;
+  }
+
+  .faq-page__footer {
+    padding-bottom: 16px;
+  }
+
+  .faq-page__center {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__list {
+
+    &:before {
+      vertical-align: unset;
+      display: inline-block;
+      margin-right: 13px;
+      width: 7px;
+      content: '';
+      height: 7px;
+      background-color: #66bb6a;
+    }
+  }
+
+  &__slogan {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .faq-page {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    .textpage-title {
+      margin-top: 0;
+    }
+  }
+}

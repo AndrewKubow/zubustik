@@ -1,0 +1,55 @@
+.details {
+
+  .content {
+    font-weight: 300;
+    padding-left: 37px;
+    margin-top: 0;
+  }
+
+  &__bus,
+  &__bag,
+  &__comfort,
+  &__discount,
+  &__map {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 0;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: bottom;
+    }
+  }
+
+  &__bus:before {
+    width: 30px;
+    height: 30px;
+    background: url('/img/bus.png') no-repeat center center;
+  }
+
+  &__bag:before {
+    width: 30px;
+    height: 25px;
+    background: url('/img/bag.png') no-repeat center center;
+  }
+
+  &__comfort:before {
+    width: 30px;
+    height: 30px;
+    background: url('/img/comfort.png') no-repeat center center;
+  }
+
+  &__discount:before {
+    width: 33px;
+    height: 24px;
+    background: url('/img/discount.png') no-repeat center center;
+  }
+
+  &__map:before {
+    width: 32px;
+    height: 32px;
+    background: url('/img/return_money.png') no-repeat center center;
+  }
+}

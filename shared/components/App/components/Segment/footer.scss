@@ -1,0 +1,16 @@
+.wayTime {
+
+  &:before {
+    content: '';
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+    width: 31px;
+    height: 31px;
+    background: url('/img/way_time.png') no-repeat center center;
+  }
+  
+  span {
+    font-weight: 500;
+  }
+}

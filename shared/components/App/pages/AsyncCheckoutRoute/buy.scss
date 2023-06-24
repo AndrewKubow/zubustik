@@ -1,0 +1,223 @@
+.checkout {
+
+  .snackbar > div {
+    height: auto !important;
+    line-height: normal !important;
+  }
+  
+  .checkout__back-btn {
+    color: #66bb69;
+    background: none;
+    text-decoration: none;
+    border: none;
+    margin-right: 20px;
+  }
+}
+
+.select-seats {
+  .checkout__trip {
+    .passangers {
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .buyer-info {
+    background-color: #66bb6a;
+    padding-bottom: 20px;
+
+    input::-webkit-input-placeholder {
+      color: #ffffff;
+    }
+
+    input:-moz-placeholder {
+      color: #ffffff;
+    }
+
+    input::-moz-placeholder {
+      color: #ffffff;
+    }
+
+    input:-ms-input-placeholder {
+      color: #ffffff;
+    }
+
+    .phone input[type='tel'] {
+      padding-left: 11px;
+    }
+
+    .phone {
+      position: relative;
+    }
+
+    .plus {
+      color: #ffffff;
+      font-size: 18px;
+      position: absolute;
+      top: 8px;
+    }
+
+    .promo__submit {
+      .btn {
+        min-width: 100px;
+      }
+    }
+
+    .buyer-info__promo {
+      font-weight: 500;
+      font-size: 16px;
+      color: #ffffff;
+      margin: 0;
+      position: absolute;
+    }
+
+    .buyer-info__reginfo {
+      color: #ffffff;
+      padding: 15px;
+      border: 1px dotted;
+    }
+
+    .buyer-info__reglink {
+      font-weight: 500;
+      font-size: 18px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .buyer-info__regtext {
+      font-weight: 300;
+      font-size: 16px;
+    }
+
+    .terms-wrapper {
+      margin-top: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      &.error {
+        border-bottom: 2px dotted #fff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .checkout {
+    &__btns {
+      margin: 30px 0;
+      text-align: center;
+
+      .btn {
+        margin: 0 10px;
+        min-width: 100px;
+      }
+    }
+  }
+
+  .select-seats--with-number {
+  }
+
+  .Stepper {
+    display: none;
+  }
+  .passangers {
+    display: none;
+  }
+  .buyer-info {
+    margin: 0 -10px;
+    padding: 10px;
+  }
+  .buyer-info__reginfo {
+    display: none;
+  }
+  .buyer-info__title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 5px 5px;
+    margin: 0;
+  }
+  .passlabel {
+    font-size: 16px;
+    letter-spacing: 0.076em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+
+  .to-buyer-info-submit {
+    margin-right: 15px;
+  }
+
+  .promo__submit {
+    text-align: right;
+    margin: 5px 0 15px;
+  }
+
+  .buyer-info__field {
+    > div {
+      width: 100% !important;
+    }
+  }
+
+  .passengers-data {
+    &:not(.visible) {
+      display: none !important;
+    }
+  }
+  .buyer-data {
+    &:not(.visible) {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .checkout {
+    margin: 0 auto;
+    // padding: 0 20px;
+    .trip__details__down,
+    .trip__details__up {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    .passangers {
+      padding-left: 15px;
+    }
+
+    .personal {
+      padding-left: 15px;
+    }
+
+    .buyer-info__title {
+      padding-left: 30px;
+    }
+
+    &__btns {
+      margin-bottom: 30px;
+      text-align: right;
+
+      .btn {
+        margin-left: 20px;
+      }
+    }
+
+    .buyer-info__field-promo {
+      margin-top: 10px;
+    }
+  }
+
+  .Stepper {
+    display: block;
+  }
+
+  .buyer-info__title {
+    font-weight: 500;
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 20px;
+  }
+}

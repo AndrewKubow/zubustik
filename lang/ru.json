@@ -1,0 +1,12 @@
+{
+  "locale": "ru",
+  "formats": {},
+  "messages": {
+    "siteTitle": "Главная",
+    "hello": "Привет!",
+    "count": "Счетчик",
+    "switchLanguage": "Переключи язык"
+  },
+  "ua": "УКР",
+  "ru": "РУС"
+}

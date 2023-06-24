@@ -1,0 +1,391 @@
+/**
+    Миксин для создания закругленных углов блочных элементов
+*/
+@mixin BorderRadiusMixin($radius) {
+  border-radius: $radius $radius $radius $radius;
+  -moz-border-radius: $radius $radius $radius $radius;
+  -webkit-border-radius: $radius $radius $radius $radius;
+}
+
+/*
+  параметры шрифта для отображения на экране
+*/
+$ticket_info_size: 16px;
+$ticket_title_size: 14px;
+$ticket_number_size: 16px;
+$ticket_total_price: 22px;
+$ticket_addon_size: 12px;
+
+$ticket_container_radius: 30px;
+
+$title_info_interval: 5px; //интервал между заголовками и текстом
+$last_row_height: 160px;
+
+// настройка первого столбца таблицы, где находится логотип
+$first_column_min_width: 140px;
+$first_column_width: 140px;
+$first_column_left_padding: 18px;
+$first_column_right_padding: 10px;
+
+$separator_column_width: 30px;
+
+$column_space_width: 15px;
+$common_info_cell_width: 30%;
+
+$first_row_padding_top: 30px;
+$first_row_padding_bottom: 25px;
+$first_row_padding_top_print: 36px;
+$first_row_padding_bottom_print: 30px;
+
+/**
+    Задает базовые параметры шрифта, которым будут выводится заголовки
+    и информационный текст
+
+    $bold=true - выводится жирным
+    $size - размер шрифта
+*/
+
+@mixin ticketBaseFont($size:integer,$bold:boolean) {
+  font-size: $size;
+  @if ($bold) {
+    font-weight: bold;
+  } @else {
+    font-weight: 300;
+  }
+}
+
+/**
+    Задает форматировние текста на английском языке.
+
+    $preText - текст, который будет вставлятся перед английским текстом. Чтоб текст перевести на
+                новую строку необходимо передать строчку "\00000a"
+*/
+
+@mixin ticketTitleFontEng($preText:string) {
+  @extend .ticket-title-font;
+  &:before {
+    @if ($preText!='newLine') {
+      content: $preText;
+    }
+  }
+  &:after {
+    content: '\00000a';
+  }
+  @if ($preText=='newLine') {
+    display: block;
+  }
+}
+
+.boarding-ticket {
+  .ticket-page-break {
+    @media print {
+      page-break-after: always;
+    }
+  }
+
+  .ticket-title-font {
+    @include ticketBaseFont($ticket_title_size,true);
+  }
+
+  .ticket-title-font-eng {
+    + span {
+      display: block;
+      margin-top: $title_info_interval;
+    }
+  }
+
+  .ticket-title-font-eng-inline {
+    @extend .ticket-title-font-eng;
+    @include ticketTitleFontEng('/ ');
+    white-space: nowrap;
+  }
+
+  .ticket-info-font {
+    display: block;
+    margin-top: 0px;
+  }
+
+  .ticket-logo {
+    width: $first_column_width;
+    min-width: $first_column_width;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+  }
+
+  .ticket-title-font-eng-wrap {
+    @extend .ticket-title-font-eng;
+    @include ticketTitleFontEng('newLine');
+  }
+
+  .ticket-info-font {
+    @include ticketBaseFont($ticket_info_size, false);
+  }
+
+  .ticket-first-column {
+    padding-left: $first_column_left_padding !important;
+    padding-right: $first_column_right_padding !important;
+    width: 190px !important;
+    text-align: center;
+  }
+  .ticket-site {
+    @extend .ticket-info-font;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  .ticket-first-column-reserve {
+    padding-left: 1px !important;
+    padding-right: 1px !important;
+    width: 190px !important;
+    text-align: center;
+  }
+
+  .ticket-table-wrap {
+    vertical-align: top;
+    padding: 0px;
+    padding-top: 10px;
+    table {
+      width: 100%;
+      margin: 0px;
+    }
+  }
+
+  .ticket-table-wrap-common-info-paddings {
+    @media screen {
+      padding-top: $first_row_padding_top !important;
+      padding-bottom: $first_row_padding_bottom;
+    }
+    @media print {
+      padding-top: $first_row_padding_top_print !important;
+      padding-bottom: $first_row_padding_bottom_print;
+    }
+  }
+
+  .ticket-table-wrap-common-info {
+    @extend .ticket-table-wrap-common-info-paddings;
+    vertical-align: top;
+    min-width: 200px;
+    width: $common_info_cell_width;
+    max-width: $common_info_cell_width;
+    line-height: 1;
+  }
+
+  .ticket-table-wrap-common-info2 {
+    @extend .ticket-table-wrap-common-info;
+    padding-top: 0px !important;
+  }
+
+  .ticket-common-info-cell {
+    height: 174px;
+  }
+
+  td {
+    vertical-align: top;
+  }
+
+  td.ticket-column-space {
+    width: $column_space_width !important;
+    min-width: $column_space_width !important;
+    max-width: $column_space_width !important;
+  }
+
+  .ticket-blank-header {
+    @extend .ticket-table-wrap-common-info;
+    padding-top: 10px !important;
+    padding-bottom: 15px !important;
+    padding-left: 340px !important;
+  }
+
+  .ticket-bottom-border {
+    border-bottom-style: solid;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    padding-bottom: 15px;
+    line-height: 1;
+  }
+
+  .ticket-total-price {
+    @include ticketBaseFont($ticket_total_price,true);
+  }
+
+  .ticket-footer {
+    padding-top: 10px;
+    white-space: nowrap;
+    padding-bottom: 20px;
+
+    & > .ticket-phones:first-of-type {
+      margin-top: $title_info_interval;
+    }
+  }
+
+  /*
+        Стиль оформления линии вертикального разделителя
+    */
+
+  .ticket-separator-base {
+    min-width: $separator_column_width;
+    max-width: $separator_column_width;
+    width: $separator_column_width;
+    padding: 0px;
+    border-width: 0px;
+    border-style: none;
+    border-left-color: black;
+    border-left-style: solid;
+    border-left-width: 1px;
+    img {
+      padding: 0px;
+      vertical-align: initial;
+    }
+  }
+
+  .ticket-separator {
+    @extend .ticket-separator-base;
+  }
+
+  .ticket-separator-rt {
+    @extend .ticket-separator-base;
+    vertical-align: top;
+  }
+
+  .ticket-separator-rb {
+    @extend .ticket-separator-base;
+    vertical-align: bottom;
+  }
+
+  /*
+        Стили для размещения кружков вертикального разделителя в шаблоне билета
+    */
+  .ticket-separator-top {
+    height: 25px;
+    background-color: white;
+    padding: 0px;
+    margin-left: -6px;
+    margin-top: -5px;
+  }
+
+  /*
+      стиль блока, отображающего нижний кружок вертикального разделителя
+    */
+  .ticket-separator-bottom {
+    height: 20px;
+    background-color: white;
+    padding: 0px;
+    padding-top: 0px;
+
+    margin-top: 140px;
+
+    margin-left: -6px;
+  }
+
+  /*
+      задаем жестко высоту последней строки, чтобы можно было расчитывать высоту блока, отображающего
+      нижний кружок вертивального разделителя
+    */
+
+  .ticket-last-row {
+    max-height: $last_row_height;
+    min-height: $last_row_height;
+    height: $last_row_height;
+  }
+
+  /*
+      убираем рамки ячеек таблицы кроме ячеек, у которых класс ticket-bottom-border - линия
+      подчеркивания, которая отделяет футтер билета (общая информация о старховке и поддержке)
+      от его данных
+    */
+
+  .table tr td:not(.ticket-bottom-border):not(.ticket-separator) {
+    border-width: 0px;
+    line-height: 1;
+  }
+
+  /*
+      Стиль рамки вокруг тела билета
+    */
+  .ticket-border {
+    border-width: 1px;
+    border-style: dotted;
+    border-color: black;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 935px;
+    @include BorderRadiusMixin($ticket_container_radius);
+    padding: 8px;
+    position: relative;
+  }
+
+  /*
+      Стиль для форматирования номера билета под QR-кодом
+    */
+  .ticket-number {
+    @extend .ticket-info-font;
+    font-size: $ticket_number_size;
+    margin-top: 8px;
+  }
+
+  .ticket-phones {
+    line-height: 1;
+    & > * {
+      @extend .ticket-info-font;
+      display: initial;
+      margin-right: 15px;
+      font-size: $ticket_info_size;
+    }
+  }
+
+  .ticket-table {
+    table-layout: fixed;
+    width: 920px !important;
+    @include ticketBaseFont($ticket_title_size,false);
+  }
+
+  .ticket-money {
+    width: 105px !important;
+  }
+
+  .ticket-money-first-column {
+    width: 140px !important;
+  }
+
+  .ticket-add-info {
+    @extend .ticket-info-font;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 935px;
+    padding: 8px;
+    position: relative;
+
+    .ticket-add-info-table {
+      table-layout: fixed;
+      width: 930px !important;
+      padding: 0px;
+      border-spacing: 0px;
+      @include ticketBaseFont($ticket_addon_size,false);
+    }
+    .ticket-add-info-table-column {
+      width: 465px !important;
+      vertical-align: top;
+
+      &__title {
+        padding-left: 27px;
+        margin-bottom: 0;
+      }
+
+      &__body {
+        margin-top: 0;
+      }
+    }
+    .ticket-addon-header {
+      text-align: left;
+      padding-top: 8px;
+      padding-left: 25px;
+      @include ticketBaseFont($ticket_info_size, true);
+    }
+  }
+}

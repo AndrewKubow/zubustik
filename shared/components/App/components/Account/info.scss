@@ -1,0 +1,119 @@
+.info {
+  padding-bottom: 40px;
+
+  div.avatar {
+    margin-bottom: 63px;
+    p {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+  &__data {
+  }
+
+  &__text {
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &__field {
+    font-weight: 300;
+
+    input {
+      &::placeholder {
+        color: #000;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__edit {
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      width: 20px;
+      height: 29px;
+      background: url('/img/edit.svg') no-repeat center center;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .info {
+    margin-top: 0;
+
+    &__text {
+      font-size: 14px;
+      padding-top: 8px;
+    }
+
+    &__field {
+      margin-bottom: -10px;
+    }
+
+    &__edit {
+      position: absolute;
+      top: -86px;
+      left: 140px;
+      border: 1px solid #66bb6a;
+      border-radius: 20px;
+      padding: 2px 10px 2px 10px;
+    }
+
+    &__save-btn {
+      position: absolute;
+      left: 142px;
+      top: -46px;
+    }
+
+    &__pass-save-btn {
+      margin-top: 14px;
+    }
+
+    &__messengers {
+      margin: 20px 0 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .info {
+    //padding-left: 20px;
+    padding-bottom: 100px;
+    margin-top: 45px;
+
+    .empty-row {
+      margin-bottom: 12px;
+    }
+
+    &__data {
+      padding: 45px 0 0 0;
+    }
+
+    &__text {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    &__field {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+    &__edit {
+      margin-left: 10px;
+      padding: 10px;
+    }
+
+    &__save-btn {
+    }
+
+    &__messengers {
+      margin: 20px 0;
+    }
+  }
+}

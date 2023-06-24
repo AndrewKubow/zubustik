@@ -1,0 +1,347 @@
+div.results__trip {
+  .trip__details {
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .trip__full-price {
+    font-weight: 300;
+    span {
+      color: #66bb6a;
+      font-weight: 500;
+    }
+    .currency {
+      font-size: 17px;
+      font-weight: 400;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+  .trip__price,
+  .trip__old,
+  .trip__price-lonely,
+  .trip__old-price {
+    font-weight: 500;
+    font-size: 18px;
+    .currency {
+      font-size: 17px;
+      font-weight: 400;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+  .trip__price,
+  .trip__price-lonely {
+    color: #66bb6a;
+  }
+  .trip__price {
+    margin-top: 0;
+  }
+  .trip__old-price {
+    color: #000000;
+    text-decoration: line-through;
+    margin-bottom: 0;
+  }
+  &.second-row {
+    padding-bottom: 15px;
+  }
+  .trip__places__low {
+    color: #f84444;
+  }
+  .discount-name {
+    color: #f84444;
+  }
+}
+
+.trip-container {
+  background-color: #fbfbfb;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+}
+
+.trip__date-btn {
+  margin-top: 10px;
+
+  input {
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .trip__date-btn {
+    margin-top: 10px;
+    position: absolute;
+    top: -120px;
+    right: 35px;
+    width: 100px;
+    z-index: 1000;
+
+    > div > div {
+      height: 35px !important;
+
+      > div {
+        padding-top: 6px !important;
+      }
+    }
+
+    input {
+    }
+  }
+
+  main.results h1 {
+    display: none;
+  }
+  .search--module {
+    margin-top: 40px;
+  }
+
+  .trip-container {
+    margin: 0 -10px 20px -10px;
+    padding: 10px;
+  }
+
+  .results__trip .col-xs-12 {
+    padding: 0 0 0 15px;
+  }
+  .results__trip .row .col-xs-8 {
+    padding: 0 0 0 17px;
+  }
+  .results__trip .row .col-xs-4 {
+    padding: 0;
+  }
+
+  .trip__time__departure,
+  .trip__time__arrived {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 17px;
+    margin: 5px 0;
+    min-height: 34px;
+
+    span {
+      display: block;
+    }
+  }
+
+  .trip-departure-time {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .trip-departure-date {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .trip-arrived-time {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .trip-arrived-date {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  p.trip__station__departure {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 17px;
+    margin: 6px 0 5px 0;
+  }
+  p.trip__station__arrived {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 17px;
+    margin: 3px 0 5px 0;
+  }
+  .trip__duration {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 6px 0 5px 0;
+  }
+
+  .trip__duration,
+  .trip__change {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 6px 5px 5px 0;
+  }
+  .sitlabel {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 17px;
+    margin: 6px 5px 5px 0;
+  }
+  .trip__places {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 17px;
+    margin: 6px 5px 5px 0;
+  }
+
+  .col-price .col-md-3 {
+    padding: 0;
+    text-align: left;
+  }
+  .trip__price-lonely {
+    font-size: 18px;
+  }
+
+  .trip__owner {
+    font-weight: 300;
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .trip__arrow-one,
+  .trip__arrow-multi {
+    margin: -1px 0 0 0;
+    width: 42px;
+    height: 35px;
+  }
+  .trip__arrow-one {
+    background: url('/img/arrow_one_route_mobile.png') no-repeat center center;
+    margin-bottom: 4px;
+    position: relative;
+
+    //&:before {
+    //  background: #66bb6a;
+    //  border-radius: 50%;
+    //  content: '';
+    //  position: absolute;
+    //  top: 12px;
+    //  left: 17px;
+    //  width: 8px;
+    //  height: 8px;
+    //}
+  }
+  .trip__arrow-multi {
+    background: url('/img/arrow_multi_route_mobile.png') no-repeat center center;
+  }
+
+  .trip__details__down,
+  .trip__details__up {
+    display: block;
+    margin: 0 auto;
+    width: 90px;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateX(10px);
+  }
+
+  .to-checkout {
+    position: absolute;
+    top: -110px;
+    right: 35px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .trip__date-btn {
+    input {
+    }
+  }
+
+  .sitlabel {
+    display: none;
+  }
+
+  .trip__price-bestoffers {
+    text-align: left;
+  }
+
+  .results__trip .row .col-md-12,
+  .col-discount,
+  .col-price {
+    padding: 0;
+  }
+
+  p {
+    font-size: 18px;
+  }
+  .trip__station {
+    font-weight: 300;
+    font-size: 18px;
+  }
+
+  .trip-container {
+    //background: #fff;
+    //border-radius: 2px;
+    //box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+    margin-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .results__trip {
+    p.place-departure,
+    p.place-arrived {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 17px;
+    }
+    p.place-departure {
+      font-size: 16px;
+      margin: 6px 0 5px 0;
+    }
+    p.place-arrived {
+      margin: 4px 0 5px 0;
+    }
+    p.time-arrived {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 17px;
+      margin: 3px 0 5px 0;
+    }
+    .duration {
+      font-size: 15px;
+      font-weight: bold;
+      margin: 6px 0 5px 0;
+    }
+    .trip__time,
+    .trip__duration,
+    .trip__places {
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .trip__arrow-one,
+    .trip__arrow-multi {
+      margin-bottom: 0;
+      width: 106px;
+      height: 10px;
+    }
+    .trip__arrow-one {
+      background: url('/img/arrow_one_route.png') no-repeat center center;
+    }
+    .trip__arrow-multi {
+      background: url('/img/arrow_multi_route.png') no-repeat center center;
+    }
+    .trip__owner {
+      font-weight: 300;
+      font-size: 14px;
+      margin-top: 22px;
+    }
+
+    .to-checkout {
+      margin-top: 5px;
+    }
+
+    .trip-departure-date,
+    .trip-arrived-date {
+      font-size: 15px;
+    }
+
+    .trip__time__departure,
+    .trip__time__arrived {
+      margin: 18px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .trip__owner {
+    text-align: center;
+  }
+  .trip__race-name {
+    text-align: center;
+  }
+}

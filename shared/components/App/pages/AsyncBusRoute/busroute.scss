@@ -1,0 +1,78 @@
+.bus-segment {
+  min-height: 52vh;
+
+  .segment__list {
+
+    &:before {
+      vertical-align: unset;
+      display: inline-block;
+      margin-right: 13px;
+      width: 7px;
+      content: '';
+      height: 7px;
+      background-color: #66bb6a;
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #4c4c4c;
+  }
+
+  h1 {
+    text-align: center;
+    color: #4c4c4c;
+    font-size: 43px;
+    font-weight: 300;
+    padding: 20px 0;
+
+    span {
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    span.currency {
+      font-size: 25px;
+      font-weight: 400;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+
+  .bus-segment__about {
+    margin-bottom: 100px;
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+  .bus-segment {
+    margin-top: 40px;
+
+    h1 {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bus-segment {
+    margin: 0 auto;
+
+    h1 {
+      text-align: center;
+      color: #4c4c4c;
+      font-size: 43px;
+      font-weight: 300;
+      padding: 20px 0;
+      span {
+        font-size: 30px;
+        font-weight: 500;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.sale__content {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 28px !important;
+  text-align: center !important;
+}
+
+a.sale__button {
+  width: 100%;
+  border: 2px solid #66bb6a;
+  border-radius: 20px;
+  background-color: inherit;
+  color: #66bb6a;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 45px;
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}

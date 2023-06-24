@@ -1,0 +1,66 @@
+.no-bus {
+
+  &__text {
+    font-size: 14px;
+    text-align: center;
+
+    p {
+      margin: 0;
+    }
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
+  &__number-label {
+    color: #333333;
+    font-size: 16px;
+    opacity: .5;
+    text-align: center;
+  }
+
+  .passanger {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+
+    &:before {
+      content: '';
+      width: 20px;
+      height: 27px;
+      background: url('/img/passanger.png') no-repeat center center;
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .no-bus {
+    padding: 20px;
+
+    &__text {
+
+      p {
+        font-size: 14px !important; // Overwrite
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .no-bus {
+    padding: 65px 0;
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__number-label {
+      font-size: 18px;
+    }
+  }
+}

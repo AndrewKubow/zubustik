@@ -1,0 +1,143 @@
+@keyframes arrowmove {
+  0% {
+    left: 5px;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 5px;
+  }
+}
+
+.discount {
+  & .slick-slider {
+    z-index: 5;
+  }
+
+  .discount__arrow-right {
+    position: relative;
+    left: 5px;
+  }
+  .show-more:hover .discount__arrow-right {
+    animation: arrowmove 1s infinite;
+  }
+
+  div.slick-slider {
+    position: relative;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      width: 240px;
+      height: 240px;
+      background: url('/img/front_big_round-min.png') no-repeat center center;
+      position: absolute;
+      left: -40px;
+      bottom: 0;
+    }
+
+    &:after {
+      content: '';
+      width: 107px;
+      height: 107px;
+      background: url('/img/front_small_round-min.png') no-repeat center center;
+      position: absolute;
+      top: -31px;
+      right: -25px;
+    }
+  }
+
+  & .slick-next:before,
+  .slick-prev:before {
+    content: '';
+    position: absolute;
+    color: #66bb6a;
+    font-size: 50px;
+    padding: 10px;
+    width: 12px;
+    height: 18px;
+  }
+
+  & .slick-prev:before {
+    background: url('/img/left_arrow.png') no-repeat center center;
+  }
+
+  & .slick-next:before {
+    background: url('/img/right_arrow.png') no-repeat center center;
+  }
+
+  & .slick-next,
+  .slick-prev {
+    top: 44%;
+  }
+  & .slick-prev {
+    left: -40px;
+  }
+  & .slick-next {
+    right: -20px;
+  }
+  & .slick-dots li.slick-active button:before {
+    color: #66bb6a;
+  }
+
+  .show-more {
+    display: block;
+    text-decoration: none;
+    color: #66bb6a;
+    opacity: 0.9;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+  .discount {
+    margin-top: 30px;
+
+    &__desktop {
+      display: none;
+    }
+
+    &__mobile {
+      margin: 0 -10px 15px;
+      display: block;
+
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  h2 {
+    text-align: center;
+    text-decoration: none;
+    color: #4c4c4c;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .discount {
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &__desktop {
+      display: block;
+    }
+
+    &__mobile {
+      display: none;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    text-decoration: none;
+    color: #4c4c4c;
+    font-size: 43px;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,76 @@
+.empty {
+  height: 35px;
+  width: 35px;
+}
+
+@media screen and (max-width: 991px) {
+  .seat-free,
+  .seat-disabled,
+  .empty {
+    margin: 5px;
+    line-height: 36px;
+  }
+
+  .second-side {
+    margin-left: 33px;
+  }
+
+  .seat-disabled {
+    height: 35px;
+    width: 35px;
+
+    color: #adadad;
+    cursor: not-allowed;
+    border: solid 1px #fff;
+    border-radius: 5px;
+    background-color: #d7d7d7;
+  }
+  .seat-free {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    color: #adadad;
+    cursor: pointer;
+
+    border: solid 1px #66bb6a;
+    border-radius: 5px;
+  }
+  .selected {
+    border: solid 1px #fff;
+    border-radius: 5px;
+    background-color: #66bb6a;
+    color: #fff;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .seat-free,
+  .seat-disabled,
+  .empty {
+    //margin: 5px;
+  }
+
+  .second-side {
+    margin-top: 33px;
+  }
+  .seat-disabled {
+    height: 35px;
+    width: 35px;
+    background: url('/img/seat_disabled.png') center center no-repeat;
+    padding-left: 16px;
+    color: #adadad;
+    cursor: not-allowed;
+  }
+  .seat-free {
+    height: 35px;
+    width: 35px;
+    background: url('/img/seat_free.png') center center no-repeat;
+    padding-left: 16px;
+    color: #adadad;
+    cursor: pointer;
+
+    &.selected {
+      color: #000000;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.account {
+  margin: 0 auto;
+
+  &__nav {
+    letter-spacing: 0.05em;
+    list-style: none;
+
+    a {
+      &,
+      &:hover,
+      &:active {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      &.selected {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .account {
+    &__nav {
+      font-size: 16px;
+      font-weight: 300;
+      margin: 0;
+      text-transform: uppercase;
+      padding: 0;
+
+      li {
+        display: inline-block;
+      }
+
+      a {
+        background: none !important;
+      }
+
+      a:not(.selected) {
+        display: none;
+      }
+    }
+
+    &__tickets {
+      margin: 15px -10px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .account {
+    padding-top: 45px;
+
+    &__nav {
+      padding-left: 0px;
+
+      li {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 300;
+        width: 16.66666667%;
+
+        &:not(:first-child) {
+          //padding-left: 25px;
+        }
+      }
+
+      a {
+        padding-bottom: 15px;
+
+        &:not(.selected) {
+          border-bottom: 1px solid #d7d7d7;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.navigation {
+  text-align: right;
+
+  li.sale a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  a {
+    font-weight: 500;
+    color: #000000;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  div.user-info {
+    display: inline-block;
+  }
+
+  & a.calendar:before {
+    content: '';
+    width: 27px;
+    height: 31px;
+    background: url('/img/calendar.png') no-repeat center center;
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+
+  a.calendar {
+    text-decoration: none;
+  }
+
+  & li.support,
+  & li.sale,
+  & li.signup,
+  & li.signin,
+  a.calendar {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:after {
+      display: block;
+      content: '';
+      height: 1px;
+      width: 0%;
+      background-color: #66bb6a;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+
+  & li.support {
+    &:before {
+      content: '';
+      width: 27px;
+      height: 31px;
+      background: url('/img/support.png') no-repeat center center;
+      display: inline-block;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+  }
+
+  @media screen and (min-width: 1px) and (max-width: 991px) {
+    ul {
+      padding-left: 0px;
+      padding-right: 1px;
+      margin: 0px;
+      height: 54px;
+      background-color: #66bb6a;
+    }
+
+    &__mobilemenu {
+      display: inline-block;
+      cursor: pointer;
+      padding: 18px 27px 0 0;
+      width: 54px;
+      height: 54px;
+
+      &:before {
+        background: #fff;
+        box-shadow: 0 8px 0 #fff, 0 16px 0 #fff;
+        content: '';
+        display: block;
+        height: 3px;
+        width: 27px;
+        margin: 0 auto;
+      }
+    }
+
+    li.schedule,
+    li.sale,
+    li.support,
+    div.user-info,
+    li.currency,
+    li.intl,
+    li.popover {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    ul {
+      margin-top: 40px;
+      // margin-right: 110px;
+    }
+
+    &__mobilemenu {
+      display: none !important;
+    }
+
+    li.schedule,
+    li.sale,
+    li.support,
+    div.user-info,
+    li.currency,
+    li.intl {
+      display: inline-block;
+    }
+
+    li:not(:first-child),
+    div.user-info,
+    li.popover {
+      padding-left: 10px;
+    }
+
+    li.signup {
+      padding-left: 0px;
+    }
+
+    li.sale {
+      margin-right: 30px;
+
+      a {
+        color: #e63737;
+        font-weight: bold;
+      }
+    }
+  }
+}

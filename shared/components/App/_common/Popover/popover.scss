@@ -1,0 +1,18 @@
+.popover {
+  display: inline-block;
+  cursor: pointer;
+
+  .user-name {
+    padding-left: 5px;
+  }
+}
+
+a.account-link {
+  top: 0;
+  left: 16px;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000000;
+}

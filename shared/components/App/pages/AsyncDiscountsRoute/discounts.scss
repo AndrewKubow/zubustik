@@ -1,0 +1,259 @@
+.discounts {
+  margin-bottom: 45px;
+
+  .discounts__filter-mobile {
+    z-index: 8;
+  }
+
+  .discount__country {
+    color: #cecece;
+    font-size: 16px;
+    font-weight: 100;
+    margin-left: 5px;
+  }
+
+  .discount__progress {
+    text-align: center;
+    margin: 152px;
+  }
+
+  div.results__tripshead {
+    margin-top: 50px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+  .arrow-down:after,
+  .arrow-up:after {
+    content: '';
+    width: 8px;
+    height: 5px;
+    display: inline-block;
+    background: url('/img/arrow.png') no-repeat;
+    position: relative;
+    left: 5px;
+    bottom: 3px;
+  }
+
+  .arrow-up:after {
+    transform: scale(1, -1);
+  }
+
+  .return {
+    margin: 20px;
+    border: 1px dashed;
+
+    h4 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+
+  .station:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid #66bb6a;
+    display: inline-block;
+    margin-right: 25px;
+    vertical-align: text-bottom;
+  }
+
+  .station {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .station__name {
+    border-left: 1px solid #d7d7d7;
+    padding-bottom: 13px;
+    margin-left: 7px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    padding-left: 35px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+
+  .station__name.last {
+    border: none;
+  }
+
+  .label,
+  .station__change__label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .label {
+    margin-top: 5px;
+  }
+
+  .station__change {
+    p {
+      font-size: 18px;
+      font-weight: 300;
+
+      span {
+        font-weight: 500;
+      }
+    }
+
+    p.station__change__time {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    p.station__change__name {
+      margin-top: 0;
+    }
+  }
+
+  .station__change__label {
+    margin-top: 12px;
+  }
+
+  p.race-name {
+    margin: 0;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  p.trip__notfound {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 100;
+    margin-top: 102px;
+  }
+
+  p.trip__nextday {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 300;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  .trip__arrow-one,
+  .trip__arrow-multi {
+    margin-bottom: 0;
+  }
+
+  p.trip__change {
+    margin-top: 0;
+  }
+
+  hr {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .trip__progress {
+    text-align: center;
+    margin: 50px;
+  }
+
+  .fa-filter {
+    font-size: 13px;
+    position: relative;
+    left: 4px;
+    top: -2px;
+    color: #808080;
+  }
+
+  .my-filter-on {
+    color: #f84444;
+  }
+
+  .trip__discount {
+    height: 50px;
+    width: 50px;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 13px;
+    margin-top: 16px;
+    background-color: #f84444 !important;
+    color: #fff !important;
+  }
+
+  .details__buy {
+    padding-bottom: 25px;
+
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      color: #66bb6a;
+    }
+
+    .buy-button {
+      margin-top: 10px;
+    }
+  }
+
+  div.discount__routehead {
+    margin-top: 20px;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .discounts {
+    &__filter {
+      margin-bottom: 20px;
+    }
+  }
+
+  .discount__routehead {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .discounts {
+    margin: 0 auto;
+
+    &__filter {
+      padding: 20px;
+    }
+
+    .trip__progress {
+      margin: 152px;
+    }
+  }
+
+  .station__change:before {
+    content: '';
+    vertical-align: bottom;
+    width: 80px;
+    height: 30px;
+    background: url('/img/change_bus.png') no-repeat center center;
+    float: left;
+    position: relative;
+    left: -30px;
+    top: 7px;
+  }
+}

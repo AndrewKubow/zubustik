@@ -1,0 +1,68 @@
+.loyalty-page {
+  margin-top: 35px;
+  margin-bottom: 100px;
+
+  .textpage-title {
+    font-size: 42px;
+    font-weight: 500;
+    color: #4c4c4c;
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      height: 5px;
+      width: 100%;
+      background-color: #66bb6a;
+    }
+  }
+
+  .textpage-subtitle {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .textpage-focus {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &__infoblock {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__list {
+
+    &:before {
+      vertical-align: unset;
+      display: inline-block;
+      margin-right: 13px;
+      width: 7px;
+      content: '';
+      height: 7px;
+      background-color: #66bb6a;
+    }
+  }
+
+  &__slogan {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .loyalty-page {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    .textpage-title {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.personal {
+  .price {
+    span {
+      color: #66bb6a;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .currency {
+      font-size: 17px;
+      font-weight: 400;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .personal {
+    padding: 0 10px;
+
+    .personal__auto-lgot {
+      height: 75px;
+    }
+
+    .price {
+      text-align: right;
+      position: absolute;
+      right: 30px;
+      top: -226px;
+      margin: 5px 0;
+    }
+
+    &__textfield {
+      height: 60px;
+
+      &:nth-child(2) {
+        margin-top: -15px;
+      }
+    }
+
+    &--extended {
+      .price {
+        top: -222px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .personal {
+    .wrapper-price {
+      padding-top: 18px;
+    }
+  }
+}

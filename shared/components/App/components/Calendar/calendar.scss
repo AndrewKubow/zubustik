@@ -1,0 +1,115 @@
+.calendar {
+  text-align: center;
+  white-space: nowrap;
+
+  &__prev,
+  &__next {
+    cursor: pointer;
+    display: inline-block;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      vertical-align: baseline;
+      width: 27px;
+      height: 31px;
+    }
+  }
+
+  &__prev {
+    &:before {
+      background: url('/img/left_arrow.png') no-repeat center center;
+    }
+
+    &.disabled:before {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  &__next:before {
+    background: url('/img/right_arrow.png') no-repeat center center;
+  }
+
+  &__item {
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+
+    &.disabled {
+      background: none;
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    &:nth-child(5) {
+      border: 1px solid #cbcbcb;
+      cursor: default;
+
+      &:hover {
+        background-color: inherit;
+      }
+    }
+
+    &:hover {
+      background-color: #fbfbfb;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+}
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+  .calendar {
+    margin: 20px 0;
+
+    &__item {
+      margin: 5px 0;
+      padding: 3px 9px;
+    }
+
+    &__key0,
+    &__key1,
+    &__key5,
+    &__key6 {
+      display: none;
+    }
+
+    &__prev {
+      margin-left: -16px;
+    }
+
+    &__next {
+      margin-right: -16px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .calendar {
+    margin-top: 60px;
+
+    &__item {
+      margin: 5px 1%;
+      padding: 3px 22px;
+    }
+
+    &__prev {
+      float: left;
+    }
+
+    &__next {
+      float: right;
+    }
+
+    &__prev:before,
+    &__next:before {
+      margin-right: 6px;
+      margin-top: 13px;
+    }
+  }
+}

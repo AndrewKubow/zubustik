@@ -1,0 +1,110 @@
+.search-module {
+  i.search__switch {
+    content: '';
+    width: 13px;
+    height: 14px;
+    background: url('/img/switch.png') no-repeat center center;
+    left: -6px;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .search-module__mobile-datepicker {
+    padding-top: 10px;
+  }
+
+  &__inner {
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  }
+
+  &__date-btn {
+    display: flex;
+
+    > div:first-child {
+      flex: 1 0 0;
+      margin-right: 30px;
+    }
+  }
+
+  &__from {
+    z-index: 1000;
+  }
+
+  &__to {
+    z-index: 999;
+  }
+
+  &__field {
+    label,
+    input {
+      font-weight: 300;
+    }
+
+    .search__label-datepicker {
+      display: inline-block;
+      transform: translateY(4px);
+    }
+  }
+}
+
+.search__country {
+  color: #cecece;
+  font-size: 16px;
+  font-weight: 100;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .search-module {
+    margin: 20px -10px 20px;
+
+    .title + & {
+      margin-top: 0;
+    }
+
+    &__inner {
+      padding: 10px 10px 45px;
+    }
+
+    &__direct-route {
+      margin: -38px 0 0 -11px;
+
+      > div > div > div {
+        margin: -3px 12px 0 0 !important;
+      }
+    }
+
+    &__btn {
+      .btn {
+        min-width: 100px;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .search__switch,
+  .bothways {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .search-module {
+    margin: 0 auto 40px auto;
+
+    &__inner {
+      padding: 15px 10px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .styles_block {
+  }
+
+  .bothways {
+    display: block;
+  }
+}

@@ -1,0 +1,42 @@
+.signin-form {
+
+  input::-webkit-input-placeholder {
+      color:#ffffff;
+  }
+  input:-moz-placeholder {
+      color:#ffffff;
+  }
+  input::-moz-placeholder {
+      color:#ffffff;
+  }
+  input:-ms-input-placeholder {
+      color:#ffffff;
+  }
+
+  &__submit {
+    > div {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .signin-form {
+    max-width: 600px;
+    padding-top: 55px;
+
+    &__submit {
+      text-align: right;
+
+      > div {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .signin-form {
+    padding: 60px 0 10px;
+  }
+}
